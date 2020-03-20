@@ -25,4 +25,11 @@ dictionary[4]=$result4
 
 echo ${!dictionary[@]}
 echo ${dictionary[@]}
-	
+
+#storing dictionary into the array	
+declare -A array
+for i in ${!dictionary[@]}
+do
+	array[((result++))]=${dictionary[$i]}
+	echo "${array[@]}"
+done
