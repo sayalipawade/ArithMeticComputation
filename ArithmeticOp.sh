@@ -8,3 +8,6 @@ read -p "Enter Three No:" c
 #compute a+b*c
 result=$((a+b*c))
 
+#compute a*b+c
+result=$((a*b+c))
+
