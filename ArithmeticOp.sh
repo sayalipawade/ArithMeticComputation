@@ -14,4 +14,5 @@ result=$((a*b+c))
 #Computing the result of c+a/b
 result=$((c+a/b))
 
-
+#Computing the result of a%b+c
+result=$((a%b+c))
