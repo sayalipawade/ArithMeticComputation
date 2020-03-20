@@ -28,6 +28,7 @@ echo ${dictionary[@]}
 
 #storing dictionary into the array	
 declare -A array
+result=0
 for i in ${!dictionary[@]}
 do
 	array[((result++))]=${dictionary[$i]}
