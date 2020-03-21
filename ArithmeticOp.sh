@@ -28,9 +28,27 @@ echo ${dictionary[@]}
 
 #storing dictionary into the array	
 declare -A array
-result=0
-for i in ${!dictionary[@]}
+i=1
+for i in ${!dictionary[@]};
 do
-	array[((result++))]=${dictionary[$i]}
-	echo "${array[@]}"
+	array[$i]=${dictionary[$i]}
 done
+echo "${array[@]}"
+
+#sorted array in descending order
+for (( i=1;i<=4;i++))
+do
+	for (( j=$((i+1));j<=4;j++))
+	do
+		if [[ ${array[$i]} -lt ${array[$j]} ]]
+		then
+			temp=${array[$i]}
+			array[$i]=${array[$j]}
+			array[$j]=$temp
+		fi
+	done
+done
+echo "${array[@]}"
+
+	
+
